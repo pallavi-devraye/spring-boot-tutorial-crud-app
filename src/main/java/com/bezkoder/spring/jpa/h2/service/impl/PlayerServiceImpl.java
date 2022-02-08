@@ -56,7 +56,7 @@ public class PlayerServiceImpl implements PlayerService {
     }
 
     @Override
-    public Player getPlayerBySportDepartment(SportDepartment sportDept) {
+    public List<Player> getPlayerBySportDepartment(SportDepartment sportDept) {
         return playerRepository.findBySportDepartment(sportDept);
     }
 }

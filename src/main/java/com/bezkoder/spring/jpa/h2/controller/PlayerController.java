@@ -69,8 +69,8 @@ public class PlayerController {
     }
 
     @GetMapping("/sportDepartment")
-    public ResponseEntity<Player> getPlayerBySportDepartment(@RequestParam("sportDept") SportDepartment sportDept) {
-        Player player = playerService.getPlayerBySportDepartment(sportDept);
+    public ResponseEntity<List<Player>> getPlayerBySportDepartment(@RequestParam("sportDept") SportDepartment sportDept) {
+        List<Player> player = playerService.getPlayerBySportDepartment(sportDept);
         if (player != null) {
             return new ResponseEntity<>(player, HttpStatus.OK);
         } else {

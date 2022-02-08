@@ -16,5 +16,5 @@ public interface PlayerService {
 
     void deletePlayer(long id);
 
-    Player getPlayerBySportDepartment(SportDepartment sportDept);
+    List<Player> getPlayerBySportDepartment(SportDepartment sportDept);
 }
